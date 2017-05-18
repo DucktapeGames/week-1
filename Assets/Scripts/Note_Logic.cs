@@ -4,19 +4,16 @@ using UnityEngine;
 
 public class Note_Logic : MonoBehaviour {
 
+	public float velocity; 
+	private Rigidbody myRig; 
 
-	IEnumerator StartMoving(){
-		while (true) {
-			this.transform.Translate (Vector3.left*11.2005f*Time.fixedDeltaTime); 
-			yield return new WaitForSeconds (Time.fixedDeltaTime); 
-		}
+	void Start(){
+		myRig = this.gameObject.GetComponent<Rigidbody> (); 
+		myRig.velocity = Vector3.left * 8f; 
+
 	}
 
-	public void move(){
-		StartCoroutine (StartMoving ()); 
-	}
+	void FixedUpdate(){
 
-	public void stop(){
-		StopCoroutine (StartMoving ()); 
 	}
 }
