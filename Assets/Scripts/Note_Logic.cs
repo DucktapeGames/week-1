@@ -5,9 +5,9 @@ using UnityEngine;
 public class Note_Logic : MonoBehaviour {
 
 
-	IEnumerator StartMoving(int rate){
+	IEnumerator StartMoving(){
 		while (true) {
-			this.transform.Translate (Vector3.left * rate); 
+			this.transform.Translate (Vector3.left*11.2005f*Time.fixedDeltaTime); 
 			yield return new WaitForSeconds (Time.fixedDeltaTime); 
 		}
 	}
