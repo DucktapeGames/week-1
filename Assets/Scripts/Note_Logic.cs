@@ -12,8 +12,5 @@ public class Note_Logic : MonoBehaviour {
 		myRig.velocity = Vector3.left * 15.25f; 
 
 	}
-
-	void FixedUpdate(){
-
-	}
+		
 }

@@ -26,40 +26,40 @@ public class Basic_Tap_Logic : MonoBehaviour {
 		song1[9,0] = false; song1[9,1] = true; song1[9,2] = false; //10
 		song1[10,0] = false; song1[10,1] = false; song1[10,2] = false; //1
 		song1[11,0] = false; song1[11,1] = true; song1[11,2] = false; //2
-		song1[12,0] = false; song1[12,1] = true; song1[12,2] = false; //3
-		song1[13,0] = false; song1[13,1] = true; song1[13,2] = false; //4
+		song1[12,0] = false; song1[12,1] = false; song1[12,2] = true; //3
+		song1[13,0] = true; song1[13,1] = true; song1[13,2] = false; //4
 		song1[14,0] = false; song1[14,1] = false; song1[14,2] = false; //5
 		song1[15,0] = false; song1[15,1] = true; song1[15,2] = false; //6
-		song1[16,0] = false; song1[16,1] = false; song1[16,2] = false; //7
+		song1[16,0] = false; song1[16,1] = false; song1[16,2] = true; //7
 		song1[17,0] = false; song1[17,1] = true; song1[17,2] = false; //8
-		song1[18,0] = false; song1[18,1] = false; song1[18,2] = false; //9
+		song1[18,0] = true; song1[18,1] = false; song1[18,2] = false; //9
 		song1[19,0] = false; song1[19,1] = true; song1[19,2] = false; //10
-		song1[20,0] = false; song1[20,1] = true; song1[20,2] = false; //1
-		song1[21,0] = false; song1[21,1] = true; song1[21,2] = false; //2
+		song1[20,0] = false; song1[20,1] = false; song1[20,2] = true; //1
+		song1[21,0] = false; song1[21,1] = true; song1[21,2] = true; //2
 		song1[22,0] = false; song1[22,1] = false; song1[22,2] = false; //3
 		song1[23,0] = false; song1[23,1] = true; song1[23,2] = false; //4
 		song1[24,0] = false; song1[24,1] = false; song1[24,2] = false; //5
 		song1[25,0] = false; song1[25,1] = true; song1[25,2] = false; //6
 		song1[26,0] = false; song1[26,1] = false; song1[26,2] = false; //7
 		song1[27,0] = false; song1[27,1] = true; song1[27,2] = false; //8
-		song1[28,0] = false; song1[28,1] = true; song1[28,2] = false; //9
-		song1[29,0] = false; song1[29,1] = true; song1[29,2] = false; //10
-		song1[30,0] = false; song1[30,1] = false; song1[30,2] = false; //1
+		song1[28,0] = true; song1[28,1] = false; song1[28,2] = false; //9
+		song1[29,0] = false; song1[29,1] = true; song1[29,2] = true; //10
+		song1[30,0] = false; song1[30,1] = false; song1[30,2] = true; //1
 		song1[31,0] = false; song1[31,1] = true; song1[31,2] = false; //2
 		song1[32,0] = false; song1[32,1] = false; song1[32,2] = false; //3
 		song1[33,0] = false; song1[33,1] = true; song1[33,2] = false; //4
 		song1[34,0] = false; song1[34,1] = false; song1[34,2] = false; //5
-		song1[35,0] = false; song1[35,1] = true; song1[35,2] = false; //6
+		song1[35,0] = false; song1[35,1] = false; song1[35,2] = true; //6
 		song1[36,0] = false; song1[36,1] = true; song1[36,2] = false; //7
-		song1[37,0] = false; song1[37,1] = true; song1[37,2] = false; //8
-		song1[38,0] = false; song1[38,1] = false; song1[38,2] = false; //9
+		song1[37,0] = false; song1[37,1] = false; song1[37,2] = true; //8
+		song1[38,0] = false; song1[38,1] = false; song1[38,2] = true; //9
 		song1[39,0] = false; song1[39,1] = true; song1[39,2] = false; //10
 		song1[40,0] = false; song1[40,1] = false; song1[40,2] = false; //1
 		song1[41,0] = false; song1[41,1] = true; song1[41,2] = false; //2
 		song1[42,0] = false; song1[42,1] = false; song1[42,2] = false; //3
 		song1[43,0] = false; song1[43,1] = true; song1[43,2] = false; //4
-		song1[44,0] = false; song1[44,1] = true; song1[44,2] = false; //5
-		song1[45,0] = false; song1[45,1] = true; song1[45,2] = false; //6
+		song1[44,0] = false; song1[44,1] = false; song1[44,2] = true; //5
+		song1[45,0] = true; song1[45,1] = true; song1[45,2] = false; //6
 		song1[46,0] = false; song1[46,1] = false; song1[46,2] = false; //7
 		song1[47,0] = false; song1[47,1] = true; song1[47,2] = false; //8
 		song1[48,0] = false; song1[48,1] = false; song1[48,2] = false; //9
@@ -74,10 +74,10 @@ public class Basic_Tap_Logic : MonoBehaviour {
 		song1[57,0] = false; song1[57,1] = true; song1[57,2] = false; //8
 		song1[58,0] = false; song1[58,1] = false; song1[58,2] = false; //9
 		song1[59,0] = false; song1[59,1] = true; song1[59,2] = false; //10
-		song1[60,0] = false; song1[60,1] = true; song1[60,2] = false; //1
-		song1[61,0] = false; song1[61,1] = true; song1[61,2] = false; //2
-		song1[62,0] = false; song1[62,1] = false; song1[62,2] = false; //3
-		song1[63,0] = false; song1[63,1] = true; song1[63,2] = false; //4
+		song1[60,0] = true; song1[60,1] = false; song1[60,2] = false; //1
+		song1[61,0] = true; song1[61,1] = false; song1[61,2] = false; //2
+		song1[62,0] = false; song1[62,1] = true; song1[62,2] = false; //3
+		song1[63,0] = true; song1[63,1] = false; song1[63,2] = false; //4
 		song1[64,0] = false; song1[64,1] = false; song1[64,2] = true; //5
 		song1[65,0] = false; song1[65,1] = true; song1[65,2] = false; //6
 		song1[66,0] = true; song1[66,1] = false; song1[66,2] = false; //7
