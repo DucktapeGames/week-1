@@ -15,16 +15,32 @@ public class Player_Tappy_Movement : MonoBehaviour {
 
 
 	void Update(){
-
-		if (Input.GetKeyDown (up) && Input.GetKeyDown (down)) {
-			myTrans.position = new Vector3 (transform.position.x, hold1, transform.position.z);    
-		} else if (Input.GetKeyDown (middle) && (Input.GetKeyDown (up) || Input.GetKeyDown (down))) {
+		//pias asd
+		if (Input.GetKeyDown (middle) && Input.GetKeyDown (down) && Input.GetKeyDown(up)) {
 			myTrans.position = new Vector3 (transform.position.x, 0, transform.position.z);    
-		}else if (Input.GetKeyDown (up) && transform.position.y < hold1) {
+		}
+		//picas ad
+		else if (Input.GetKeyDown (up) && Input.GetKeyDown (down)) {
 			myTrans.position = new Vector3 (transform.position.x, hold1, transform.position.z);    
-		}else if(Input.GetKeyDown(middle)){
+		}
+		//picas sd
+		else if (Input.GetKeyDown (middle) && Input.GetKeyDown (up)) {
+			myTrans.position = new Vector3 (transform.position.x, 0, transform.position.z);    
+		}
+		//picas as
+		else if (Input.GetKeyDown (middle) && Input.GetKeyDown (down)) {
+			myTrans.position = new Vector3 (transform.position.x, 0, transform.position.z);    
+		}
+		//picas a
+		else if (Input.GetKeyDown (up) && transform.position.y < hold1) {
+			myTrans.position = new Vector3 (transform.position.x, hold1, transform.position.z);    
+		}
+		//picas d
+		else if(Input.GetKeyDown(middle)){
 			myTrans.position = new Vector3 (transform.position.x, 0, transform.position.z);       
-		}else if(Input.GetKeyDown(down)&&transform.position.y>hold2){
+		}
+		//picas d
+		else if(Input.GetKeyDown(down)&&transform.position.y>hold2){
 			myTrans.position = new Vector3 (transform.position.x, hold2, transform.position.z);    
 			 
 		}
