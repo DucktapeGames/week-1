@@ -1,11 +1,15 @@
 fileFormatVersion: 2
 guid: b852932c6c6b53f4385bdc45dc9b5c7c
 folderAsset: yes
+<<<<<<< HEAD
 <<<<<<< HEAD:Assets/Scripts.meta
 timeCreated: 1495001757
 =======
 timeCreated: 1495150155
 >>>>>>> master:Assets/Animations/AnimationControllers.meta
+=======
+timeCreated: 1495150155
+>>>>>>> master
 licenseType: Free
 DefaultImporter:
   userData: 
