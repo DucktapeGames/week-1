@@ -26,10 +26,10 @@ public class Basic_Tap_Logic : MonoBehaviour {
 		song1[9,0] = false; song1[9,1] = true; song1[9,2] = false; //10
 		song1[10,0] = false; song1[10,1] = false; song1[10,2] = false; //1
 		song1[11,0] = false; song1[11,1] = true; song1[11,2] = false; //2
-		song1[12,0] = false; song1[12,1] = false; song1[12,2] = true; //3
-		song1[13,0] = true; song1[13,1] = true; song1[13,2] = false; //4
+		song1[12,0] = false; song1[12,1] = false; song1[12,2] = false; //3
+		song1[13,0] = false; song1[13,1] = true; song1[13,2] = false; //4
 		song1[14,0] = false; song1[14,1] = false; song1[14,2] = false; //5
-		song1[15,0] = false; song1[15,1] = true; song1[15,2] = false; //6
+		song1[15,0] = true; song1[15,1] = true; song1[15,2] = false; //6
 		song1[16,0] = false; song1[16,1] = false; song1[16,2] = true; //7
 		song1[17,0] = false; song1[17,1] = true; song1[17,2] = false; //8
 		song1[18,0] = true; song1[18,1] = false; song1[18,2] = false; //9
@@ -227,17 +227,17 @@ public class Basic_Tap_Logic : MonoBehaviour {
 	IEnumerator launchTaps(){
 		for (int i = 0; i < 197; i++) {
 			if (song1 [i, 0] == true) {
-				Instantiate (NOTE_PREFAB, spawnPositions [0].position, Quaternion.identity);
+				Instantiate (NOTE_PREFAB, spawnPositions [0].position, this.transform.rotation);
 
 			} else {
 				Instantiate (OBSTACLE_PREFAB, spawnPositions [0].position, Quaternion.identity);
 			}
 			if (song1 [i, 1] == true) {
-				Instantiate (NOTE_PREFAB, spawnPositions [1].position, Quaternion.identity);
+				Instantiate (NOTE_PREFAB, spawnPositions [1].position, this.transform.rotation); 
 
 			}
 			if (song1 [i, 2] == true) {
-				Instantiate (NOTE_PREFAB, spawnPositions [2].position, Quaternion.identity);
+				Instantiate (NOTE_PREFAB, spawnPositions [2].position, this.transform.rotation);
 
 			}else {
 				Instantiate (OBSTACLE_PREFAB, spawnPositions [2].position, Quaternion.identity);

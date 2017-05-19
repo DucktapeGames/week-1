@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Player_Tappy_Movement : MonoBehaviour {
 
-	public KeyCode up, middle, down; 
-	private bool bup, bmiddle, bdown;
+	public KeyCode up, down; 
+	private bool bup, bdown;
 	public float hold1, hold2;  
 	private Transform myTrans; 
 
@@ -14,34 +14,21 @@ public class Player_Tappy_Movement : MonoBehaviour {
 	}
 
 
-	void FixedUpdate(){
-		//pias asd
-		if (Input.GetKey (middle) && Input.GetKey (down) && Input.GetKey(up)) {
-			myTrans.position = new Vector3 (transform.position.x, 0, transform.position.z);    
-		}
+	void LateUpdate(){
 		//picas ad
-		else if (Input.GetKey (up) && Input.GetKey (down)) {
-			myTrans.position = new Vector3 (transform.position.x, hold1, transform.position.z);    
+		if (Input.GetKeyDown (up) && Input.GetKeyDown (down)) {
+			myTrans.position = new Vector3 (Touch_Thingies.offsetX , transform.position.y, transform.position.z);    
 		}
-		//picas sd
-		else if (Input.GetKey (middle) && Input.GetKey (up)) {
-			myTrans.position = new Vector3 (transform.position.x, 0, transform.position.z);    
-		}
-		//picas as
-		else if (Input.GetKey (middle) && Input.GetKey (down)) {
-			myTrans.position = new Vector3 (transform.position.x, 0, transform.position.z);    
-		}
+
+
 		//picas a
-		else if (Input.GetKey (up) && transform.position.y < hold1) {
-			myTrans.position = new Vector3 (transform.position.x, hold1, transform.position.z);    
+		else if (Input.GetKeyDown (up) && transform.position.y < hold1) {
+			myTrans.position = new Vector3 (Touch_Thingies.offsetX , transform.position.y + hold1, transform.position.z);    
 		}
+
 		//picas d
-		else if(Input.GetKey(middle)){
-			myTrans.position = new Vector3 (transform.position.x, 0, transform.position.z);       
-		}
-		//picas d
-		else if(Input.GetKey(down)&&transform.position.y>hold2){
-			myTrans.position = new Vector3 (transform.position.x, hold2, transform.position.z);    
+		else if(Input.GetKeyDown(down)&&transform.position.y>hold2){
+			myTrans.position = new Vector3 (Touch_Thingies.offsetX , transform.position.y + hold2, transform.position.z);    
 			 
 		}
 
