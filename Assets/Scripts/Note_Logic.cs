@@ -9,7 +9,7 @@ public class Note_Logic : MonoBehaviour {
 
 	void Start(){
 		myRig = this.gameObject.GetComponent<Rigidbody> (); 
-		myRig.velocity = Vector3.left * 15.729166f; 
+		myRig.velocity = Vector3.left * 15.25f; 
 
 	}
 
