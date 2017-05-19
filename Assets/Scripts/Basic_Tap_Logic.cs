@@ -5,6 +5,7 @@ using UnityEngine;
 public class Basic_Tap_Logic : MonoBehaviour {
 
 	public GameObject NOTE_PREFAB; 
+	public GameObject OBSTACLE_PREFAB; 
 	public Transform[] spawnPositions; 
 	[SerializeField]
 	public bool[,] song1; 
@@ -228,6 +229,8 @@ public class Basic_Tap_Logic : MonoBehaviour {
 			if (song1 [i, 0] == true) {
 				Instantiate (NOTE_PREFAB, spawnPositions [0].position, Quaternion.identity);
 
+			} else {
+				Instantiate (OBSTACLE_PREFAB, spawnPositions [0].position, Quaternion.identity);
 			}
 			if (song1 [i, 1] == true) {
 				Instantiate (NOTE_PREFAB, spawnPositions [1].position, Quaternion.identity);
@@ -236,6 +239,8 @@ public class Basic_Tap_Logic : MonoBehaviour {
 			if (song1 [i, 2] == true) {
 				Instantiate (NOTE_PREFAB, spawnPositions [2].position, Quaternion.identity);
 
+			}else {
+				Instantiate (OBSTACLE_PREFAB, spawnPositions [2].position, Quaternion.identity);
 			}
 			yield return new WaitForSeconds (0.3973509934f); 
 		}

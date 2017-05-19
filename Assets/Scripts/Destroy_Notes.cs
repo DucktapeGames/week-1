@@ -5,10 +5,11 @@ using UnityEngine;
 public class Destroy_Notes : MonoBehaviour {
 
 	void OnTriggerEnter(Collider something){
-		if (something.tag == "Note") {
+		if (something.tag == "Note" || something.tag == "Obstacle") {
 			Destroy (something.gameObject); 
 		}
 	}
+
 
 
 }
