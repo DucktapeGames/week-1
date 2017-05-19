@@ -146,8 +146,9 @@ public class Basic_Tap_Logic : MonoBehaviour {
 				Instantiate (NOTE_PREFAB, spawnPositions [2].position, Quaternion.identity);
 
 			}
-			yield return new WaitForSeconds (0.1826f); 
+			yield return new WaitForSeconds (0.19865f); 
 		}
+		//2.516666
 	}
 
 }
