@@ -11,7 +11,7 @@ public class Basic_Tap_Logic : MonoBehaviour {
 	public bool[,] song1; 
 
 
-	void Awake(){
+	void Awake() {
 		song1 = new bool[197, 3]; 
 		///here are the song notes you must play
 		song1[0,0] = false; song1[0,1] = false; song1[0,2] = false; //1
@@ -220,11 +220,11 @@ public class Basic_Tap_Logic : MonoBehaviour {
 
 	}
 
-	void Start(){
+	void Start() {
 		StartCoroutine (launchTaps()); 
 	}
 
-	IEnumerator launchTaps(){
+	IEnumerator launchTaps() {
 		for (int i = 0; i < 197; i++) {
 			if (song1 [i, 0] == true) {
 				Instantiate (NOTE_PREFAB, spawnPositions [0].position, this.transform.rotation);
@@ -246,5 +246,4 @@ public class Basic_Tap_Logic : MonoBehaviour {
 		}
 		//2.516666
 	}
-
 }
