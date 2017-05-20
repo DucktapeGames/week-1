@@ -16,7 +16,8 @@ public class Touch_Thingies : MonoBehaviour {
 	void OnTriggerEnter(Collider something) {
 		if (something.tag == "Note") {
 			Player_Score_Life.SCORE += 2;
-			Player_Score_Life.LIFE = Mathf.Clamp (Player_Score_Life.LIFE + 1, 0, 100); 
+			Player_Score_Life.LIFE = Mathf.Clamp (Player_Score_Life.LIFE + 1, 0, 100);
+			// Play note anim
 			Destroy (something.gameObject); 
 			offsetX = Mathf.Clamp (0, -4f, transform.position.x + (100f / Player_Score_Life.LIFE)); 
 			myTrans.position = new Vector3 (offsetX, transform.position.y, transform.position.z);    
@@ -24,6 +25,12 @@ public class Touch_Thingies : MonoBehaviour {
 		else if (something.tag == "Obstacle") {
 			Player_Score_Life.LIFE = Mathf.Clamp (Player_Score_Life.LIFE - 10, 0, 100);
 			Player_Score_Life.SCORE--;
+			/*
+			if (Player_Score_lige.LIFE == 0) {
+				go to finish scene
+			}
+			Play obstacle anim explosion
+			*/
 			Destroy (something.gameObject);
 			offsetX = Mathf.Clamp (0, -4f, transform.position.x - (100f / Player_Score_Life.LIFE));
 			myTrans.position = new Vector3 (offsetX, transform.position.y, transform.position.z);    
