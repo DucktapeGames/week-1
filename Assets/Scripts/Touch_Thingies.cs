@@ -23,7 +23,7 @@ public class Touch_Thingies : MonoBehaviour {
 			myTrans.position = new Vector3 (offsetX, transform.position.y, transform.position.z);    
 		}
 		else if (something.tag == "Obstacle") {
-			Player_Score_Life.LIFE = Mathf.Clamp (Player_Score_Life.LIFE - 2, 0, 100); 
+			Player_Score_Life.LIFE = Mathf.Clamp (Player_Score_Life.LIFE - 10, 0, 100); 
 			Player_Score_Life.SCORE--;
 			Destroy (something.gameObject);
 			offsetX = Mathf.Clamp (0, -4f, transform.position.x - (100f/Player_Score_Life.LIFE)); 

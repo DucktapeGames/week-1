@@ -14,7 +14,7 @@ public class Player_Tappy_Movement : MonoBehaviour {
 	}
 
 
-	void LateUpdate(){
+	void FixedUpdate(){
 		//picas ad
 		if (Input.GetKeyDown (up) && Input.GetKeyDown (down)) {
 			myTrans.position = new Vector3 (Touch_Thingies.offsetX , transform.position.y, transform.position.z);    
