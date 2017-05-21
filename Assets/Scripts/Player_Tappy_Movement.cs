@@ -13,20 +13,20 @@ public class Player_Tappy_Movement : MonoBehaviour {
 		myTrans = this.GetComponent<Transform> (); 
 	}
 
-	void FixedUpdate() {
+	void LateUpdate() {
 		//picas ad
 		if (Input.GetKeyDown (up) && Input.GetKeyDown (down)) {
-			myTrans.position = new Vector3 (Touch_Thingies.offsetX, transform.position.y, transform.position.z);    
+			myTrans.position = new Vector3 (myTrans.position.x, transform.position.y, transform.position.z);    
 		}
 
 		//picas a
 		else if (Input.GetKeyDown (up) && transform.position.y < hold1) {
-			myTrans.position = new Vector3 (Touch_Thingies.offsetX, transform.position.y + hold1, transform.position.z);    
+			myTrans.position = new Vector3 (myTrans.position.x, transform.position.y + 2, transform.position.z);    
 		}
 
 		//picas d
 		else if(Input.GetKeyDown(down)&&transform.position.y>hold2) {
-			myTrans.position = new Vector3 (Touch_Thingies.offsetX, transform.position.y + hold2, transform.position.z);    
+			myTrans.position = new Vector3 (myTrans.position.x, transform.position.y - 2, transform.position.z);    
 		}
 	}
 }
