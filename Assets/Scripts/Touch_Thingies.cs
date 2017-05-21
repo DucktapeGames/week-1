@@ -35,7 +35,6 @@ public class Touch_Thingies : MonoBehaviour {
 			offsetX = Mathf.Clamp (transform.position.x - (101f / Player_Score_Life.LIFE + 1),-40,-4);
 			myTrans.position = new Vector3 (offsetX, transform.position.y, transform.position.z);    
 		}
-
-		Debug.Log (Player_Score_Life.LIFE + " " + Player_Score_Life.SCORE + "WITH OFFSET: " + offsetX); 
+			 
 	}
 }
