@@ -35,6 +35,11 @@ public class Touch_Thingies : MonoBehaviour {
 			offsetX = Mathf.Clamp (transform.position.x - (101f / Player_Score_Life.LIFE + 1),-40,-4);
 			myTrans.position = new Vector3 (offsetX, transform.position.y, transform.position.z);    
 		}
-			 
+		else if (something.tag == "Nichan") {
+			/*
+			Play player destroy animation
+			Load game over scene
+			*/
+		}
 	}
 }
