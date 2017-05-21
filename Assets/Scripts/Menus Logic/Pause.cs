@@ -8,7 +8,7 @@ public class Pause : MonoBehaviour {
 	public GameObject pauseMenu; 
 
 	void Awake(){
-		
+		Time.timeScale = 1; 
 	}
 		
 	void Update () {
