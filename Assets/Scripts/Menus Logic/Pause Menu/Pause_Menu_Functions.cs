@@ -19,7 +19,8 @@ public class Pause_Menu_Functions : MonoBehaviour {
 	}
 
 	public void Restart(){
-		SceneManager.LoadScene (1); 
+		SceneManager.LoadScene (1);
+		Continue ();
 	}
 
 	public void Menu(){
