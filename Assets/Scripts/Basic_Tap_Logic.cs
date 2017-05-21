@@ -10,25 +10,33 @@ public class Basic_Tap_Logic : MonoBehaviour {
 	[SerializeField]
 	public bool[,] song1; 
 
+	public GameObject Niichan; 
+	public Animator NiiChanAnimation; 
+	public Player_Tappy_Movement Player; 
+	public Pause PauseManager; 
+	public GameObject LoseScreenManager; 
+	public GameObject winningTitle;
+	public GameObject returnToMenuButton; 
 
 	void Awake() {
+		NiiChanAnimation.enabled = false; 
 		song1 = new bool[197, 3]; 
 		///here are the song notes you must play
 		song1[0,0] = false; song1[0,1] = false; song1[0,2] = false; //1
 		song1[1,0] = false; song1[1,1] = true; song1[1,2] = false; //2
 		song1[2,0] = false; song1[2,1] = false; song1[2,2] = false; //3
 		song1[3,0] = false; song1[3,1] = true; song1[3,2] = false; //4
-		song1[4,0] = false; song1[4,1] = true; song1[4,2] = false; //5
+		song1[4,0] = false; song1[4,1] = false; song1[4,2] = true; //5
 		song1[5,0] = false; song1[5,1] = true; song1[5,2] = false; //6
-		song1[6,0] = false; song1[6,1] = false; song1[6,2] = false; //7
+		song1[6,0] = true; song1[6,1] = false; song1[6,2] = true; //7
 		song1[7,0] = false; song1[7,1] = true; song1[7,2] = false; //8
 		song1[8,0] = false; song1[8,1] = false; song1[8,2] = false; //9
-		song1[9,0] = false; song1[9,1] = true; song1[9,2] = false; //10
-		song1[10,0] = false; song1[10,1] = false; song1[10,2] = false; //1
-		song1[11,0] = false; song1[11,1] = true; song1[11,2] = false; //2
+		song1[9,0] = true; song1[9,1] = true; song1[9,2] = false; //10
+		song1[10,0] = true; song1[10,1] = false; song1[10,2] = false; //1
+		song1[11,0] = false; song1[11,1] = true; song1[11,2] = true; //2
 		song1[12,0] = false; song1[12,1] = false; song1[12,2] = false; //3
-		song1[13,0] = false; song1[13,1] = true; song1[13,2] = false; //4
-		song1[14,0] = false; song1[14,1] = false; song1[14,2] = false; //5
+		song1[13,0] = false; song1[13,1] = false; song1[13,2] = true; //4
+		song1[14,0] = true; song1[14,1] = false; song1[14,2] = true; //5
 		song1[15,0] = true; song1[15,1] = true; song1[15,2] = false; //6
 		song1[16,0] = false; song1[16,1] = false; song1[16,2] = true; //7
 		song1[17,0] = false; song1[17,1] = true; song1[17,2] = false; //8
@@ -36,8 +44,8 @@ public class Basic_Tap_Logic : MonoBehaviour {
 		song1[19,0] = false; song1[19,1] = true; song1[19,2] = false; //10
 		song1[20,0] = false; song1[20,1] = false; song1[20,2] = true; //1
 		song1[21,0] = false; song1[21,1] = true; song1[21,2] = true; //2
-		song1[22,0] = false; song1[22,1] = false; song1[22,2] = false; //3
-		song1[23,0] = false; song1[23,1] = true; song1[23,2] = false; //4
+		song1[22,0] = true; song1[22,1] = false; song1[22,2] = false; //3
+		song1[23,0] = true; song1[23,1] = true; song1[23,2] = false; //4
 		song1[24,0] = false; song1[24,1] = false; song1[24,2] = false; //5
 		song1[25,0] = false; song1[25,1] = true; song1[25,2] = false; //6
 		song1[26,0] = false; song1[26,1] = false; song1[26,2] = false; //7
@@ -50,12 +58,12 @@ public class Basic_Tap_Logic : MonoBehaviour {
 		song1[33,0] = false; song1[33,1] = true; song1[33,2] = false; //4
 		song1[34,0] = false; song1[34,1] = false; song1[34,2] = false; //5
 		song1[35,0] = false; song1[35,1] = false; song1[35,2] = true; //6
-		song1[36,0] = false; song1[36,1] = true; song1[36,2] = false; //7
+		song1[36,0] = false; song1[36,1] = false; song1[36,2] = true; //7
 		song1[37,0] = false; song1[37,1] = false; song1[37,2] = true; //8
 		song1[38,0] = false; song1[38,1] = false; song1[38,2] = true; //9
-		song1[39,0] = false; song1[39,1] = true; song1[39,2] = false; //10
-		song1[40,0] = false; song1[40,1] = false; song1[40,2] = false; //1
-		song1[41,0] = false; song1[41,1] = true; song1[41,2] = false; //2
+		song1[39,0] = false; song1[39,1] = true; song1[39,2] = true; //10
+		song1[40,0] = false; song1[40,1] = false; song1[40,2] = true; //1
+		song1[41,0] = false; song1[41,1] = true; song1[41,2] = true; //2
 		song1[42,0] = false; song1[42,1] = false; song1[42,2] = false; //3
 		song1[43,0] = false; song1[43,1] = true; song1[43,2] = false; //4
 		song1[44,0] = false; song1[44,1] = false; song1[44,2] = true; //5
@@ -225,7 +233,8 @@ public class Basic_Tap_Logic : MonoBehaviour {
 	}
 
 	IEnumerator launchTaps() {
-		for (int i = 0; i < 197; i++) {
+		//197
+		for (int i = 0; i < 2; i++) {
 			if (song1 [i, 0] == true) {
 				Instantiate (NOTE_PREFAB, spawnPositions [0].position, this.transform.rotation);
 
@@ -244,6 +253,51 @@ public class Basic_Tap_Logic : MonoBehaviour {
 			}
 			yield return new WaitForSeconds (0.3973509934f); 
 		}
-		//2.516666
+
+
+		//when the code reaches here that means that the player finished the song. 
+		yield return new WaitForSeconds(5f); 
+		StartCoroutine (StartCinematic ());  
+		yield return null; 
+	}
+
+	IEnumerator StartCinematic(){
+		LoseScreenManager.gameObject.SetActive (false); 
+		PauseManager.enabled = false; 
+		Player.enabled = false; 
+		yield return NiichanDeathAnimation ();  
+		winningTitle.gameObject.SetActive(true); 
+		yield return new WaitForSeconds (3f); 
+		winningTitle.gameObject.SetActive(false); 
+		returnToMenuButton.gameObject.SetActive (true); 
+		yield return null; 
+	}
+
+	IEnumerator NiichanDeathAnimation(){
+		float time = 0; 
+
+		while (true) {
+			time += Time.fixedDeltaTime; 
+			yield return new WaitForSeconds(Time.fixedDeltaTime); 
+			Niichan.transform.position = Vector3.Lerp(Niichan.transform.position, new Vector3(-14,0,0),Time.fixedDeltaTime); 
+			if (time > 5f) {
+				break; 
+			}
+		}
+
+		NiiChanAnimation.enabled = true; 
+
+		time = 0; 
+		while (true) {
+			time += Time.fixedDeltaTime; 
+			yield return new WaitForSeconds(Time.fixedDeltaTime); 
+			Niichan.transform.position = Vector3.Lerp(Niichan.transform.position, new Vector3(-50,0,0),Time.fixedDeltaTime); 
+			Player.transform.position = Vector3.Lerp(Player.transform.position, new Vector3(15,0,0),0.5f*Time.fixedDeltaTime); 
+
+			if (time > 5f) {
+				break; 
+			}
+		}
+		yield return null; 
 	}
 }
