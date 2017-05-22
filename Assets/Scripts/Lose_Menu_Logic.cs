@@ -15,7 +15,7 @@ public class Lose_Menu_Logic : MonoBehaviour {
 	}
 
 	void Update(){
-		if (player.position.x <=-35f) {
+		if (player.position.x <=-32f) {
 			StartLoseSequence (); 
 		}
 	}
