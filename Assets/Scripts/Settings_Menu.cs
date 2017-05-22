@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Settings_Menu : MonoBehaviour {
 
@@ -11,5 +12,9 @@ public class Settings_Menu : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		VolumeSlider.value = SettingsRef.Volume;
+	}
+
+	public void GoToMenu () {
+		SceneManager.LoadScene (0);
 	}
 }
