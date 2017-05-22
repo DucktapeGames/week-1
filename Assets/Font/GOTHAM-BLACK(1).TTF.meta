@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: faa4d02fd7f929c4f9759f4e8519f0b7
+timeCreated: 1495414790
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Gotham Black
+  fontNames:
+  - Gotham Black
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
