@@ -234,7 +234,7 @@ public class Basic_Tap_Logic : MonoBehaviour {
 
 	IEnumerator launchTaps() {
 		//197
-		for (int i = 0; i < 2; i++) {
+		for (int i = 0; i < 197; i++) {
 			if (song1 [i, 0] == true) {
 				Instantiate (NOTE_PREFAB, spawnPositions [0].position, this.transform.rotation);
 
